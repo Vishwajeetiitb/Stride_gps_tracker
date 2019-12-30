@@ -47,8 +47,8 @@
       //     }
   
       map  = new google.maps.Map(document.getElementById('map-canvas'), {center:{lat:lat,lng:lng},zoom:17});
-      mark = new google.maps.Marker({position:{lat:lat, lng:lng}, map:map, label: 'E-Shuttle 1'  });
-      mark2 = new google.maps.Marker({position:{lat:lat2, lng:lng2}, map:map, draggable : false, label : "E-Shuttle 2"});
+      mark = new google.maps.Marker({position:{lat:lat, lng:lng}, map:map, label: 'E1'  });
+      mark2 = new google.maps.Marker({position:{lat:lat2, lng:lng2}, map:map, draggable : false, label : "E2"});
       // mark.getElementsByTagName('')
     };
 
@@ -58,6 +58,7 @@
       if(payload.message.lat){
       lat = payload.message.lat;
       lng = payload.message.lng;
+      console.log(lat)
 
       map.setCenter({lat:lat, lng:lng, alt:0});
       mark.setPosition({lat:lat, lng:lng, alt:0});
